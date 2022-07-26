@@ -1,5 +1,6 @@
 import useClima from "../Hooks/useClima";
 import {BsFillCloudMoonFill} from 'react-icons/bs'
+import ui from '../../Helpers/Fecha'
 
 const Resultado = () => {
   const { resultado } = useClima();
@@ -7,14 +8,12 @@ const Resultado = () => {
 
   const Kelvin = 273.15;
   console.log(resultado);
-
-
+  
   return (
     <div>
       <div className="resultado">
         {resultado?.name && (
           <>
-               <BsFillCloudMoonFill className="tiempo"/>
             <p className="temperaturaAct">
              {(main.temp - Kelvin).toFixed(0)}{"°"}
            </p>
@@ -24,7 +23,8 @@ const Resultado = () => {
              }
              
            </p>
-           <p className="nombre" >23/07/2022  02:18</p>
+             <p className="nombre"> {ui.Fecha()}  </p>
+             <p className="nombre"> {ui.Hora()}   </p>
           </>
         )}
       </div>

@@ -44,13 +44,13 @@ const Formulario = () => {
                 {resultado.main?.temp_max && (
                   <>
                     <p>
-                      Temperatura Maxima: {(main.temp_max - Kelvin).toFixed(0)}{" "}
+                      Temperatura Maxima: {(main.temp_max - Kelvin).toFixed(0)}{"°"}
                     </p>
                     <p>
-                      Temperatura Minima: {(main.temp_min - Kelvin).toFixed(0)}{" "}
+                      Temperatura Minima: {(main.temp_min - Kelvin).toFixed(0)}{"°"}
                     </p>
                     <p>
-                      Sensacion Termica: {(main.feels_like - Kelvin).toFixed(0)}{" "}
+                      Sensacion Termica: {(main.feels_like - Kelvin).toFixed(0)}{"°"}
                     </p>
                     <p>Humedad: {main.humidity} % </p>
                   </>
